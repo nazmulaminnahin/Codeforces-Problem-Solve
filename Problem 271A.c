@@ -1,23 +1,19 @@
 #include<stdio.h>
 int main()
 {
-
-    int y,a,b,c,d,count=0;
-    while(scanf("%d",&y)!=EOF)
+    int year,a,b,c,d;
+    scanf("%d",&year);
+    while(1)
     {
-        while(y>0)
-        {
-            y++;
-            a=y/1000;
-            b=(y%1000)/100;
-            c=((y%1000)%100)/10;
-            d=((y%1000)%100)%10;
-
-            if(a!=b&&a!=c&&a!=d&&d!=c&&d!=b&&c!=b)
-                break;
-        }
-        printf("%d\n",y);
+        year++;
+        a=year/1000;
+        b=year/100%10;
+        c=year/10%10;
+        d=year%10;
+         if(a!=b && a!=c && a!=d && b!=c && b!=d && c!=d)
+         {
+             break;
+         }
     }
-
-
+    printf("%d",year);
 }
